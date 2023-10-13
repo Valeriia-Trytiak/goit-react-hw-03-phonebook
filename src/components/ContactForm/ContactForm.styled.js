@@ -1,7 +1,9 @@
 import styled from 'styled-components';
 import { Form, ErrorMessage, Field } from 'formik';
+import { CiUser, CiPhone } from 'react-icons/ci';
 
 export const StyledForm = styled(Form)`
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: ${p => p.theme.spacing(5)};
@@ -28,16 +30,31 @@ export const StyledInput = styled(Field)`
   }
 `;
 
-export const StyledLabel = styled.label`
-  position: relative;
+// export const StyledLabel = styled.label`
+//   /* position: relative; */
+// /*
+//   &::before {
+//     content: '';
+//     position: absolute;
+//     top: 50%;
+//     left: 10px; /* или любое другое значение отступа от левого края */
+//     transform: translateY(-50%);
+//     color: ${p => p.theme.colors.grey};
+//     font-size: 20px; /* Размер иконки */
+//   } */
 
-  svg {
-    position: absolute;
-    top: 10px;
-    left: 50px;
-    color: ${p => p.theme.colors.grey};
-  }
-`;
+//   /* svg {
+//     position: absolute;
+//     top: 28px;
+//     left: 5px;
+//     color: ${p => p.theme.colors.grey};
+
+//     @media only screen and (min-width: 768px) {
+//       top: 10px;
+//       left: 50px;
+//     }
+//   } */
+// `;
 
 export const AddContactButton = styled.button`
   text-decoration: none;
@@ -63,5 +80,31 @@ export const AddContactButton = styled.button`
     box-shadow: 0 15px 20px rgba(0, 128, 128, 0.4);
     color: white;
     transform: translateY(-7px);
+  }
+`;
+
+export const UserIcon = styled(CiUser)`
+  position: absolute;
+  top: 28px;
+  left: 5px;
+  font-size: 20px;
+  color: ${p => p.theme.colors.grey};
+
+  @media only screen and (min-width: 768px) {
+    top: 10px;
+    left: 50px;
+  }
+`;
+
+export const UserPhone = styled(CiPhone)`
+  position: absolute;
+  top: 103px;
+  left: 5px;
+  font-size: 20px;
+  color: ${p => p.theme.colors.grey};
+
+  @media only screen and (min-width: 768px) {
+    top: 68px;
+    left: 65px;
   }
 `;

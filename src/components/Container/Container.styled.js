@@ -15,7 +15,6 @@ export const Container = styled.div`
     max-width: 768px;
   }
 
-  /*Desktop styles*/
   @media only screen and (min-width: 1024px) {
     max-width: 1024px;
   }

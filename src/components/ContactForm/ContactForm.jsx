@@ -1,8 +1,8 @@
 import { Component } from "react";
 import { Formik } from 'formik';
 import * as Yup from 'yup';
-import { StyledForm, Error, StyledInput, StyledLabel, AddContactButton  } from "./ContactForm.styled"
-import { CiUser, CiPhone } from 'react-icons/ci';
+import { StyledForm, Error, StyledInput, AddContactButton, UserIcon, UserPhone  } from "./ContactForm.styled"
+
 
 const ContactShema = Yup.object().shape({
     name: Yup.string()
@@ -34,16 +34,16 @@ export class ContactForm extends Component {
         validationSchema={ContactShema}
       >
         <StyledForm>
-          <StyledLabel>Name
-            <CiUser size="20px" />
+          <label>Name 
+            <UserIcon />
           <StyledInput name="name" type="text" />
           <Error name="name" component="span" />
-          </StyledLabel>
-          <StyledLabel>Number
-          <CiPhone size="20px" />
+          </label>
+          <label>Number
+          <UserPhone />
             <StyledInput name="number" type="tel" />
             <Error name="number" component="span" />
-          </StyledLabel>
+          </label>
           <AddContactButton type="submit">Add contact</AddContactButton>
         </StyledForm>
       </Formik>
